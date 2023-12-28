@@ -1,0 +1,347 @@
+<!--
+
+    ◕══☆══☆☆═☆═══◕
+
+      Created by
+           Safura Patel 💫
+
+      》》⏰Clock⏰《《
+     
+    ◕══☆══☆☆═☆═══◕
+     
+-->
+     
+<!DOCTYPE html>
+<html>
+<head>
+<title> clock </title>
+<style type="text/css">
+
+/*
+ ◕══☆══☆☆═☆═══◕
+
+   Created by
+  Safura Patel 💫
+  
+   》》⏰Clock⏰《《
+  
+ ◕══☆══☆☆═☆═══◕
+ */
+ body{
+ display: flex;
+ justify-content: center;
+ background:;
+ }
+
+ /* plate */
+ .ct{
+ width:225px;
+ height:260px;
+ border:5px solid teal;
+ border-radius:10%;
+ margin:120px auto;
+ position:relative;
+ overflow:hidden;
+ background:#fff;
+ box-shadow: -3px -3px 30px #FFF,
+ 3px 3px 30px rgba(0, 0, 0, 0.5);
+ }
+
+ /* number */
+ .N{
+ position:absolute;
+ font-size:22px;
+ font-weight:300;
+ color:darkblue;
+ text-shadow:0px 8px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ #n1{
+ right:calc(125px - 62.5px);
+ top:calc(125px - 108.25317547305px);
+ }
+
+ #n2{
+ top:calc(125px - 69.5px);
+ right:calc(125px - 101.25317547305px);
+ }
+ 
+ #n3{
+ right:5px;
+ top:0px;
+ bottom:0px;
+ display:flex;
+ align-items:center;
+ }
+
+ #n4{
+ bottom:calc(125px - 69.5px);
+ right:calc(125px - 101.25317547305px);
+ }
+
+ #n5{
+ right:calc(125px - 62.5px);
+ bottom:calc(125px - 108.25317547305px);
+ }
+
+ #n6{
+ right:0px;
+ left:0px;
+ bottom:0px;
+ text-align:center;
+ }
+
+ #n7{
+ left:calc(125px - 62.5px);
+ bottom:calc(125px - 108.25317547305px);
+ }
+
+ #n8{
+ bottom:calc(125px - 69.5px);
+ left:calc(125px - 101.25317547305px);
+ }
+
+ #n9{
+ left:5px;
+ top:0px;
+ bottom:0px;
+ display:flex;
+ display:-webkit-flex;
+ align-items:center;
+ }
+
+ #n10{
+ top:calc(125px - 62.5px);
+ left:calc(125px - 108.25317547305px);
+ }
+
+ #n11{
+ top:calc(125px - 101.25317547305px);
+ left:calc(125px - 69.5px);
+ }
+
+ #n12{
+ right:0px;
+ left:0px;
+ top:0px;
+ text-align:center;
+ }
+
+ /* holder */
+ #C{
+ position: absolute;
+ top:17px;
+ bottom:0px;
+ left:0px;
+ right:0px;
+ margin:auto;
+ width:10px;
+ height:10px;
+ border-radius:50%;
+ z-index:10;
+ background:darkblue;
+ }
+
+ #S{height:90px;width:1px;}
+
+ #M{height:75px;width:2px;}
+
+ #H{height:60px;width:5px;}
+
+ #S, #M, #H {
+ margin:auto;
+ right:0px;
+ left:0px;
+ bottom:122.5px;
+ z-index:5;
+ border-radius:100%; 
+ background:teal;
+ position: absolute;
+ transform-origin:50% 100%;
+ }
+
+ #label{
+ position: absolute;
+ margin:50px 100px;
+ text-align:center;
+ font-size:10px;
+ color:#A8B8C0;
+ }
+ 
+ #date {
+ font-size: 12px;
+ width:85px;
+ height:22px;
+ color:teal;
+ text-align:center;
+ margin:150px 70px;
+ padding-top:3px;
+ padding-bottom:-3px;
+ box-shadow:0px 8px 15px rgba(0, 0, 0, 0.1);
+ }
+ 
+ #day {
+ width:45px;
+ height:22px;
+ font-size: 13px;
+ color:teal;
+ text-align:center;
+ margin:60px 90px;
+ position:absolute;
+ font-weight:400;
+ padding-top:3px;
+ padding-bottom:-3px;
+ box-shadow:0px 8px 15px rgba(0, 0, 0, 0.1);
+ }
+
+
+a{
+color:darkblue;
+font-size:19px;
+font-family:serif;
+text-decoration:none;
+}
+        
+#Safu{
+width:auto;
+font-size:18px;
+margin:480px 10px;
+position:absolute;
+text-align:center;
+font-family:serif;
+text-shadow: 0px 0px #333;
+}
+</style>
+</head>
+<body>
+<!-- plate -->
+<div class="ct">
+<div class="N" id="n1">1</div>
+<div class="N" id="n2">2</div>
+<div class="N" id="n3">3</div>
+<div class="N" id="n4">4</div>
+<div class="N" id="n5">5</div>
+<div class="N" id="n6">6</div>
+<div class="N" id="n7">7</div>
+<div class="N" id="n8">8</div>
+<div class="N" id="n9">9</div>
+<div class="N" id="n10">10</div>
+<div class="N" id="n11">11</div>
+<div class="N" id="n12">12</div>
+
+<!-- holder -->
+<div id="C"></div>
+<!-- sec, min, hr -->
+<div id="S"></div>
+<div id="M"></div>
+<div id="H"></div>
+
+<div id="day"></div><br>
+<div id="date"></div>
+</div>
+   
+   <div id="Safu">
+   <a href="https://www.sololearn.com/Profile/20717867/?ref=app">
+   &copy; Safura Patel 💫</a>
+   </div>
+   
+</body>
+<script type="text/javascript">
+/*
+    ◕══☆══☆☆═☆═══◕
+
+       Created by
+    Safura Patel 💫
+    
+      》》⏰Clock⏰《《
+  
+    ◕══☆══☆☆═☆═══◕
+ 
+*/
+window.addEventListener("load",function (){
+secs();
+});
+
+function secs(){
+var full_date = new Date();
+
+//for seconds
+var current_seconds = full_date.getSeconds();
+var rotation_angle_s = current_seconds * 6;
+var rotate_value_s = "rotate(" + rotation_angle_s + "deg)";
+document.getElementById("S").style.transform = rotate_value_s;
+
+//for minutes
+var current_minute = full_date.getMinutes();
+var rotation_angle_m = current_minute * 6;
+var rotate_value_m = "rotate(" + rotation_angle_m + "deg)";
+document.getElementById("M").style.transform = rotate_value_m;
+
+//for hours
+var current_hour = full_date.getHours();
+if(current_hour > 12){
+var current_hour = current_hour;
+}
+else{
+var current_hour = current_hour - 12;
+}
+var accurate_h_value = current_minute / 60 * 30;
+var rotation_angle_h = (current_hour * 30) + accurate_h_value;
+var rotate_value_h = "rotate(" + rotation_angle_h + "deg)";
+document.getElementById("H").style.transform = rotate_value_h;
+setTimeout(secs,1000);
+}
+
+
+/* info */
+function zero(d) {
+ if (d < 10) {
+ d = "0" + d;
+ }
+ return d;
+ }
+
+ // Weekdays 
+ function now() {
+ let now = new Date();
+ let w = new Array()
+ w[0] = 'sun';
+ w[1] = 'Mon';
+ w[2] = 'Tue';
+ w[3] = 'Wed';
+ w[4] = 'Thu';
+ w[5] = 'Fri';
+ w[6] = 'Sat';
+ let weekday = w[now.getDay()];
+ document.getElementById("day").innerHTML =  '('+ weekday + ')' ;
+ }
+ 
+ // Month 
+ setInterval(now, 0)
+ function date() {
+ let date = new Date();
+ let d = zero(date.getDate());
+ let m = new Array();
+ m[0] = 'Jan';
+ m[1] = 'Feb';
+ m[2] = 'Mar';
+ m[3] = 'Apr';
+ m[4] = 'May';
+ m[5] = 'Jun';
+ m[6] = 'Jul';
+ m[7] = 'Aug';
+ m[8] = 'Sep';
+ m[9] = 'Oct';
+ m[10] ='Nov';
+ m[11] ='Dec';
+ 
+ let month = m[date.getMonth()];
+ let y = date.getFullYear();
+ document.getElementById("date").innerHTML = d+"  " +month+" , "+y;
+ month
+ }
+ setInterval(date, 0)
+
+</script>
+</body>
+</html>
