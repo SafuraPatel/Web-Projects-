@@ -1,0 +1,267 @@
+<!--
+    ◕══☆══☆☆═☆═══◕
+  
+      Created by 
+         Safura Patel 💫
+
+    》》》 Stop Watch 《《《
+ 
+    ◕══☆══☆☆══☆══◕
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Stop Watch</title>
+  <link rel="stylesheet" href="Safu.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  
+ <style type="text/css">
+    /* Created by Safura Patel 💫  */   
+    body {
+    text-align:center;
+    }
+    
+    /* main box */
+    .box {
+    margin:30px auto;
+    color:darkblue;
+    height:220px;
+    width:300px;
+    overflow:hidden;
+    border-radius:10px;
+    background-color:#fff;
+    box-shadow:3px 3px 30px #dff,
+    3px 3px 30px rgba(0, 0, 0, 0.7);
+    }
+    
+    /*Timing */
+    p {
+    margin:20px auto; 
+    font-size:40px;
+    font-weight:320;
+    width:250px;
+    color:#555;
+    background-color:#dfd;
+    border:2px solid #ccc;
+    }
+    
+    /* lapping record */
+    ul {
+    margin:25px auto;
+    text-align:center;
+    height:170px;
+    width:170px;
+    max-height:auto;
+    background:#eee;
+    overflow:scroll;
+    background-color:transparent;
+    }
+    
+    ::-webkit-scrollbar{
+    width:4px;
+    border-radius:5px;
+    }
+    ::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    background-color:#eee;
+    }
+    
+    li {
+    position:relative;
+    margin:2px 1px;
+    padding-top:5px;
+    text-align:center;
+    background:#dfd;
+    right:18px;
+    color:teal;
+    height:34px;
+    list-style:none;
+    font-size:23px;
+    border:2px solid teal;
+    }
+    
+    li:nth-child(odd){
+    color:teal;
+    background:#F0FFFF; 
+    }
+    
+    /*all buttons*/
+    button {
+    margin-bottom:30px;
+    padding-top:1px;
+    text-align:center;
+    width:84px; 
+    height:40px;
+    color:#fff;
+    overflow:hidden;
+    font-weight:400;
+    font-size:20px;
+    font-family:serif;
+    background-color:#fff;
+    border-radius:10%;
+    box-shadow: inset 0px 0px 5px #eee; 
+    border-color:#eee;
+    }
+    
+    #start{
+    top:10px;
+    left:-20px;
+    width:100px;
+    border-radius:1%;
+    color:#fff;
+    position:relative;
+    background-color:#6495ED;
+    }
+    
+    #stop{
+    top:10px;
+    display:none;
+    border-radius:1%;
+    position:relative;
+    background:#FA8072;
+    }
+    
+    #lap {
+    top:10px;
+    display:none;
+    border-radius:1%;
+    position:relative;
+    background-color:#4169E1;
+    }
+    
+    #reset{
+    top:10px;
+    color:#fff;
+    border-radius:1%;
+    background-color:#008080;
+    position:relative;
+    }
+    
+    #clear {
+    display:none;
+    margin:auto;
+    width:220px;
+    height:50px;
+    color:#fff;
+    border-radius:2px;
+    background-color:#708090;
+    box-shadow:1px 2px 5px 0px #eee;
+    }
+    
+    h1{
+    margin-top:80px;
+    color:darkblue;
+    font-size:30px;
+    font-weight:460;
+    font-family:serif;
+    text-shadow:0px 2px #ccc;
+    }
+    
+    small{
+    color:#eee;
+    font-size:17px;
+    font-family:serif;
+    text-shadow:0px 0px #eee;
+    text-shadow:.8px .2px #ccc;
+    
+    }
+    
+    a{
+    color:darkblue;
+    font-size:19px;
+    font-family:serif;
+    text-decoration:none;
+    }
+    
+    #Safura{
+    width:auto;
+    font-size:12px;
+    text-align:center;
+    font-family:serif;
+    postion:relative;
+    margin:60px;
+    border-radius:0px;
+    text-shadow: 0px 0px #333;
+    }
+    
+ </style>
+ </head>
+ <body>
+ <h1>STOP WATCH</h1>
+ <div class="box">
+ <small><b>☆SMP☆</b></small>
+ <p id="time">00:00:00:00</p> 
+ <button id="start">START</button>
+ <button id="stop">STOP</button>
+ <button id="lap">LAP</button>
+ <button id= "reset">RESET</button>
+ </div>
+ <ul id="log"></ul>
+ <button id="clear">CLEAR LAPS </button>
+ <center>
+ <div id="Safura">
+ <a href="https://www.sololearn.com/Profile/20717867/?ref=app">
+ &copy; Safura Patel 💫</a>
+ </div>
+ </center>
+<script type="text/javascript">
+   /*
+   ◕══☆══☆☆═☆═══◕
+   
+   Created by 
+   Safura Patel 💫
+   
+   》》》 Stop Watch 《《《
+   
+   ◕══☆══☆☆══☆══◕
+   
+   */
+   
+   window.onload = function(){ 
+   var el = {
+   body:document.body,
+   time:document.getElementById('time'),
+   blank:"00:00:00:00",
+   start:document.getElementById('start'),
+   stop:document.getElementById('stop'),
+   lap:document.getElementById('lap'),
+   reset:document.getElementById('reset'),
+   clear:document.getElementById('clear'),
+   ul:document.getElementById('log')
+   };
+   var hr = 0 , min = 0, sec = 0, mil = 0;
+   function watch(){
+   this.style.display = "none";  
+   el.stop.style.display = "inline-block";
+   el.lap.style.display = "inline-block";
+   
+   var setI = setInterval(function(){
+   var format = (hr>9? hr :"0" + hr)+":"+ (min > 9 ? min : "0" + min)+':'+(sec > 9 ? sec : "0" + sec) + ':' + (mil > 9 ? mil : "0" + mil);
+   el.time.innerHTML = format;
+   mil++;
+   if(mil > 99){sec++; mil = 0;} 
+   if(sec > 59){min++; sec = 0;} 
+   if(hr > 59){hr++; hr=1;}
+   el.lap.onclick = function log(){
+   var item = document.createElement('li');
+   el.clear.style.display = "block";
+   item.innerHTML = format;
+   el.ul.prepend(item);
+   }
+   el.clear.onclick = function(){el.ul.innerHTML = "";this.style.display = "none";}
+   } ,10);
+   el.stop.onclick = function(){clearInterval(setI);this.style.display = "none"; el.start.style.display = "inline-block"; el.lap.style.display = "none";};
+   }
+   
+   function reset(){
+   hr =0 ; min = 0;sec = 0;mil = 0;
+   time.innerHTML = el.blank;
+   }
+   
+   el.start.onclick = watch;
+   el.reset.onclick = reset;
+   };
+   
+</script>
+</body>
+</html>
