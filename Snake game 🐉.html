@@ -1,0 +1,397 @@
+<!-- 
+Created by
+      Safura Patel 💫
+
+         🐉 Snake game 🐉
+🐉 1st time I have tried to make a game.
+
+🐉 My high score is 570 😃
+   And your ? 
+
+-->
+
+<!doctype html>
+<html>
+ <head>     
+   <title>🐉 Snake game 🐉</title>  
+ <meta charset="utf-8">
+ <meta name="viewport"     content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+<link rel="stylesheet" href="Safu.css">
+<style type="text/css">
+/* Created by Safura Patel 💫  */        
+  body{
+  margin:10px;
+  padding:0px;
+  position:relative;
+  }
+        
+  #load{
+  top:2px;
+  left:2px;
+  right:3px;
+  height:auto;
+  width:auto; 
+  z-index:10;
+  color:#fff;
+  position:fixed;
+  background-color: #0cbaba;
+  background-image: linear-gradient(325deg, #0cbaba 0%, #380036 90%);
+  }
+        
+  #LB{
+  padding:1px;
+  width:300px; 
+  margin:25px auto;
+  border-radius:3px;
+  background-color:#333;
+  box-shadow:inset 0px 3px 1px #333;
+  }
+            
+  #LD{ 
+  height:10px;
+  display:block;
+  border-radius:0px;
+  background-color:lightgreen;
+  transition:width 0.05s ease;
+  }
+            
+  h1{
+  width:50%; 
+  color:#fff;
+  font-size:25px;
+  text-align:center;
+  margin:40px 25%; 
+  padding:20px 0px;
+  background:#0d324d;
+  border:2px solid #2a5470;
+  text-shadow:0px 0px #333;
+  box-shadow:0px 5px 20px #0d324d;
+  font-family:'Crimson Pro', serif;
+  }
+            
+  h3{
+  color:#8DD7BF;
+  font-size:25px; 
+  text-align:center;
+  font-family:'Crimson Pro', serif;
+  }
+            
+  a{
+  color:white;
+  font-size:19px;
+  font-family:serif;
+  text-decoration:none;
+  }
+            
+  #Safu{
+  width:auto;
+  color:white;
+  margin-top:35px;
+  padding:20px 20px;
+  text-align:center; 
+  font-size:18px;
+  font-family:serif;
+  border-radius:0px;
+  text-shadow: 0px 0px #333;
+  }
+            
+  img{
+  margin:70px;
+  width:150px;
+  height:150px;
+  border-radius:300px ;
+  background-size:;
+  border:2px solid #2a5470;
+  box-shadow:0 2px 10px #0d324d;
+  }
+            
+  small{
+  margin:70px;
+  font-size:18px;
+  color: #8DD7BF;
+  text-shadow: 0px 0px 3px purple, 0px 0px 3px purple;
+  }
+                
+  header{
+  height:50px;
+  background:black;
+  box-shadow:0px 5px 20px #eee;
+  font-family:serif;
+  padding:10px 10px;
+  border:2px solid gray;
+  box-shadow:0px 5px 20px #333;
+  }
+            
+  #hr{
+  width:100%;
+  float:right;
+  text-align:center;
+  padding:-15px 15px;
+  color:lightgreen;
+  font-size:18px;
+  font-family: 'Acme', sans-serif;
+  }       
+             
+  b{
+  margin-left:160px;
+  text-align:right;
+  color:#fff;
+  font-size:18px;
+  }
+ 
+  #control{
+  width:300px;
+  margin:0 auto;
+  }
+                 
+  p{
+  height:10px;
+  width:10px;
+  background:#252525;
+  position:relative;
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  line-height:10px;
+  border:0px solid red;
+  box-shadow:10px 1px 20px #333;
+  background-color: #252525;
+  }
+            
+  button{
+  color:#eee;
+  width:20%;
+  height:40px;
+  border-radius:10px;
+  border:2px solid darkblue;
+  background-color:#252525;
+  box-shadow:0px 5px 20px #333;
+  -moz-transform:rotateX(500deg);
+  -webkit-transform:rotateX(500deg);
+  -ms-transform:rotateX(500deg);
+  transform:translateY(-270px);
+  }
+            
+  .ud{
+  margin:15px 40% 30px 40%;
+  }
+                   
+  #l{
+  font-size:18px;
+  margin:10px 8% 10px 17%;
+  }
+  
+  #R{
+  font-size:18px;
+  margin:8px 15% 10px 60px;
+  }
+            
+  #D span{
+  display:block;
+  -moz-transform:rotateX(180deg);
+  -webkit-transform:rotateX(180deg);
+  -ms-transform:rotateX(180deg);
+  transform:rotateX(180deg);
+  font-size:20px;
+  }
+   
+  #U span{
+  margin-top:5px;
+  display:block;
+  font-size:20px;
+  }
+</style>
+
+</head>
+  
+<body onload="mover()">
+  <!-- 1st page / loading -->
+  <div id="load">
+  <center>
+  <br>
+  <small> ☆SMP☆ </small>
+  <img src="https://drive.google.com/uc?id=1ix6YV1K826I_1BBjmf7WkxBW46QVb6Jh"  alt="Snake">
+  </center>
+  <h1>Snake Game</h1><br>
+  <h3>LOADING...</h3>
+  <div id="LB">
+  <span id="LD"></span>
+  </div>
+  <div id="Safu">
+  <a href="https://www.sololearn.com/Profile/20717867/?ref=app">
+  &copy; Safura patel 💫</a>
+  </div>
+  </div>
+     
+  <!-- 2nd page -->    
+  <!-- Score box --> 
+  <header>
+  <b> Score</b>
+  <div id="hr"> 0</div>
+  </header>
+    <br><br><br>
+ 
+  <!-- controlers -->
+  <div id="control"></div>
+  <button id="U" class="ud"      onclick="moveu()"><span>U</span></button>
+  <br>
+  <button id="l" onclick="movel()">L</button>
+  <button id="R" onclick="mover()">R</button>
+  <br>
+  <button id="D" class="ud" onclick="moved()"><span>D</span></button>
+  </body>
+  </html>    
+
+<script>   
+ // loading 
+ alert("1st time I tried to make a game.\n\n I hope you like it 🤗 ")
+ 
+ var e = document.querySelector("#LD");
+ var w = 0;
+ var interval=setInterval(function(){
+ e.style.width=w+"%";
+ w=w+1;
+ if(w==100){document.getElementById("load").style.display="none";}
+ },50);
+      
+ for(n=0;n<900;n++){
+ var paragraph = document.createElement("p");
+ var ctr= document.getElementById("control");
+ var Pr = document.getElementById("para1");
+ ctr.insertBefore(paragraph, Pr);}
+ for(m=0;m<900;m++){
+ var dd = Math.floor(m/30);
+ document.getElementsByTagName("p")[m].style.transform="translateY(-"+dd*11+"px)";
+ document.getElementsByTagName("p")[m].style.mozTransform="translateY(-"+dd*11+"px)";
+ document.getElementsByTagName("p")[m].style.webkitTransform="translateY(-"+dd*11+"px)";
+ document.getElementsByTagName("p")[m].style.msTransform="translateY(-"+dd*11+"px)";}
+ var bd=[464,465];
+ var it1;
+ var it2;
+ var it3;
+ var it4;
+ var pnt=Math.floor(Math.random()*900);
+ var score=0;
+      
+ // direction down 
+ function moved(){
+ clearInterval(it2);
+ clearInterval(it3);
+ clearInterval(it4);
+ document.getElementById("U").disabled=true;
+ document.getElementById("D").disabled=true;
+ document.getElementById("R").disabled=false;
+ document.getElementById("l").disabled=false;
+      
+ it1=setInterval(function(){
+ var ttt=bd[bd.length-1]+30;
+ if(ttt>899){
+ ttt=ttt-900;}
+ if(bd.indexOf(ttt)>0){
+ document.write("<h1 style='text-align:center; background:#333; color:#eee; padding:20px'>"+"Game Over"+"</h1>"+"<h3 style='font-size:25px; background:#333; color:#eee; text-align:center; padding:20px;'>"+"Your Score: "+score+"</h3>");
+ clearInterval(it1);}
+ else{
+ bd.push(ttt);
+ if(ttt==pnt){
+ score+=10;
+ document.getElementById("hr").innerHTML=score;
+ pnt=Math.floor(Math.random()*900);}
+ // else{document.getElementsByTagName("p")[bd.shift()].style.background="linear-gradient(315deg, #772f1a 0%, #f2a65a 74%)"; }
+ else{document.getElementsByTagName("p")[bd.shift()].style.background="#252525"; }
+ for(l=0;l<bd.length;l++){
+ // document.getElementsByTagName("p")[bd[l]].style.background="linear-gradient(315deg, #772f1a 65%, #f2a65a 20%)" ;}
+ document.getElementsByTagName("p")[bd[l]].style.background="linear-gradient(305deg, #772f1a 65%, #f2a65a 20%)" ;}
+ document.getElementsByTagName("p")[pnt].style.background="gray";
+ }},150)}
+      
+ // directiom right 
+ function mover(){
+ clearInterval(it1);
+ clearInterval(it3);
+ clearInterval(it4);
+ document.getElementById("R").disabled=true;
+ document.getElementById("l").disabled=true;
+ document.getElementById("U").disabled=false;
+ document.getElementById("D").disabled=false;
+ it2=setInterval(function(){
+ var ttt=bd[bd.length-1]+1;
+ if(ttt%30==0){
+ ttt=ttt-30;}
+ if(bd.indexOf(ttt)>0){
+ document.write("<h1 style='text-align:center; background:#333; color:#eee; padding:20px'>"+"Game Over"+"</h1>"+"<h3 style='font-size:25px; background:#333; color:#eee; text-align:center; padding:20px;'>"+"Your Score: "+score+"</h3>");
+ clearInterval(it2);}
+ else{
+ bd.push(ttt);
+ if(ttt==pnt){
+ score+=10;
+ document.getElementById("hr").innerHTML=score;
+ pnt=Math.floor(Math.random()*900);}
+ else{document.getElementsByTagName("p")[bd.shift()].style.background="#252525";}
+ for(l=0;l<bd.length;l++){
+ document.getElementsByTagName("p")[bd[l]].style.background="linear-gradient(315deg, #772f1a 65%, #f2a65a 20%)";}
+ document.getElementsByTagName("p")[pnt].style.background="gray";
+ }},150)}
+      
+ // direction left
+ function movel(){
+ clearInterval(it1);
+ clearInterval(it2);
+ clearInterval(it4);
+ document.getElementById("R").disabled=true;
+ document.getElementById("l").disabled=true;
+ document.getElementById("U").disabled=false;
+ document.getElementById("D").disabled=false;
+ it3=setInterval(function(){
+ var ttt=bd[bd.length-1]-1;
+ if(ttt%30==29 && ttt>0){
+ ttt=ttt+30;}
+ if(ttt<0){ttt=ttt+30
+ } if(bd.indexOf(ttt)>0){
+ document.write("<h1 style='text-align:center; background:#333; color:#eee; padding:20px;'>"+"Game Over"+"</h1>"+"<h3 style='font-size:25px; background:#333; color:#eee; text-align:center; padding:20px;'>"+"Your Score: "+score+"</h3>");
+ clearInterval(it3);}
+ else{
+ bd.push(ttt);
+ if(ttt==pnt){
+ score+=10;
+ document.getElementById("hr").innerHTML=score;
+ pnt=Math.floor(Math.random()*900);}
+ else{document.getElementsByTagName("p")[bd.shift()].style.background="#252525";}
+ for(l=0;l<bd.length;l++){
+ document.getElementsByTagName("p")[bd[l]].style.background="linear-gradient(315deg, #772f1a 65%, #f2a65a 20%)";
+ }
+ document.getElementsByTagName("p")[pnt].style.background="gray";
+ }},150)}
+      
+// direction up
+ function moveu(){
+ clearInterval(it1);
+ clearInterval(it2);
+ clearInterval(it3);
+ document.getElementById("U").disabled=true;
+ document.getElementById("D").disabled=true;
+ document.getElementById("R").disabled=false;
+ document.getElementById("l").disabled=false;
+ it4=setInterval(function(){
+ var ttt=bd[bd.length-1]-30;
+ if(ttt<0){
+ ttt=ttt+900;}
+ if(bd.indexOf(ttt)>0){
+ document.write("<h1 style='text-align:center; background:#333; color:#eee; padding:20px;'>"+"Game Over"+"</h1>"+"<h3 style='font-size:25px; background:#333; color:#eee; text-align:center; padding:20px;'>"+"Your Score: "+score+"</h3>");
+ clearInterval(it4);}
+ else{
+ bd.push(ttt);
+ if(ttt==pnt){
+ score+=10;
+ document.getElementById("hr").innerHTML=score;
+ pnt=Math.floor(Math.random()*900);}
+ else{document.getElementsByTagName("p")[bd.shift()].style.background="#252525";}
+ for(l=0;l<bd.length;l++){
+ document.getElementsByTagName("p")[bd[l]].style.background="linear-gradient(305deg, #772f1a 65%, #f2a65a 20%)";}
+ document.getElementsByTagName("p")[pnt].style.background="gray";}
+ },150)
+ }
+
+     
+</script>
+</body>
+</html>
