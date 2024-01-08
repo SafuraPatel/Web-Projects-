@@ -1,0 +1,99 @@
+<!------------------------------_>
+   Created by
+       Safura Patel 💫
+
+    》》🔑 Login page UI 🔑《《
+
+<------------------------------->
+
+<html>
+<head>
+  <title>Simple Login Page </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+input:focus,
+textarea:focus {  outline: none;  }
+
+*{-webkit-tap-highlight-color: transparent;}
+  </style>
+</head>
+
+<body>
+  <!-- main -->
+  <div class="mx-4 flex w-auto min-h-screen justify-center items-center">
+
+<!-- sheet -->
+<div class="flex flex-col space-y-6 bg-white-500 h-50 w-50 p-8 border-2 rounded shadow-xl">
+
+  <!-- tittle -->
+  <span class="text-2xl text-indigo-800 my-0 ml-6 font-bold">Login to your Account</span>
+
+  <div class="relative justify-between flex space-x-1">
+    <!-- Google -->
+    <button class="relative text-xs font-light mt-6 rounded w-full ml-6">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+        class="absolute ml-14 items-center flex h-8 w-8 ">
+    </button>
+
+
+    <!-- facebook -->
+    <button class="relative text-xs font-light mt-6 rounded w-full ml-6 p-2">
+      <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-1024.png"
+        class="absolute ml-5 flex h-9 w-9">
+    </button>
+  </div>
+
+  <!-- dividing section -->
+  <div class="relative justify-between flex px-14">
+    <span class="relative top-3 h-0.5 w-20 bg-gray-300 rounded-t-xl"></span>
+    <span class="px-1">or</span>
+    <span class="relative top-3 h-0.5 w-20 bg-gray-300 rounded-t-xl"></span>
+  </div><!-- dividing section -->
+
+  <!-- info -->
+  <span class="text-base">Username or Email
+    <input type="text" placeholder="✉️ Email or Username" class="text-sm rounded flex w-full p-2 ring-1 ring-gray-300">
+  </span>
+  <div class="relative">
+    <span class="text-base">Password
+      <input id="password" type="password" placeholder="🔑 Password"
+        class="text-sm rounded w-full p-2 ring-1 ring-gray-300">
+    </span>
+    <span id='toggle-pass' class="absolute right-3 top-9 text-indigo-800" onclick="showPass()"><i
+        class="fas fa-eye"></i></span>
+  </div>
+  <!-- info end -->
+
+  <div class='flex justify-center'>
+    <button class="bg-blue-800 text-white font-bold py-2 h-10 px-2 w-40 rounded">Login</button>
+  </div>
+
+  <a href="#" class="flex text-lg hover:underline"> Forgot Password?</a>
+
+</div><!-- sheet end -->
+  </div> <!-- main end -->
+  
+  <script>
+const showPass = () => {
+  const password = document.querySelector('#password');
+  const toggler = document.querySelector('#toggle-pass');
+  toggler.innerHTML = `<i
+class="fas fa-eye"></i>`;
+
+  if (password.type === 'password') {
+    password.type = 'text';
+    toggler.innerHTML = `<i class="fas fa-eye-slash"></i>`;
+  } else {
+    password.type = 'password';
+    toggler.innerHTML = `<i
+  class="fas fa-eye"></i>`;
+  }
+};
+  </script>
+</body>
+
+</html>
