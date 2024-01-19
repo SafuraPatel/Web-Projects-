@@ -1,0 +1,152 @@
+<!-- 
+       Created by
+          Safura Patel 💫
+-->
+<html>
+  <head>
+      <title> CSS ICE-CREAM </title>
+   <style type="text/css"> 
+   
+   /*bowl*/
+   #Bowl{ 
+   content:'';
+   position:absolute;
+   top:330px;
+   left:95px;
+   height:110px;
+   width:185px;
+   z-index:5;
+   overflow:hidden;
+   background:#9a6050;
+   border-radius:1% 1% 80% 80%;
+   }
+   
+   /* Holder */
+   #Holder {
+   left:148px;
+   top:450px;  
+   z-index:-1;
+   width:80px;
+   height:30px;
+   position:absolute;
+   border-radius:100% 100%;
+   background-color:#9a6050;
+   }
+   
+   #BB{ 
+   content:'';
+   position:absolute;
+   top:380px;
+   left:180px;
+   height:80px;
+   width:15px;
+   z-index:5;
+   overflow:hidden;
+   background:#9a6050;
+   border-radius:1% 1% 80% 80%;
+   background-size:100% 100%;
+   }
+   
+   /*Chocolate stick*/
+   #C{
+   content:'';
+   position:absolute;
+   top:250px;
+   left:250px;
+   transform:rotateZ(40deg);
+   height:150px;
+   width:20px;
+   background:repeating-linear-gradient(-20deg, brown, brown 10px, #eee 10px, #ecf0f1 20px);
+   z-index:1;
+   clip-path:polygon(0 0, 100% 0, 100% 95%, 0% 100%);  
+   }
+   
+   
+   /*4 scoops*/
+   .S{ 
+   position:relative;
+   top:290px;
+   left:140px;
+   height:80px;
+   width:85px;
+   z-index:-1;
+   border-radius:50%;
+   background:#dfd;
+   box-shadow:
+   0 -45px pink /*1*/
+   , -45px -20px #9accd5 /*2*/
+   , 45px -20px chocolate /*3*/
+   ;
+   }
+   
+   .S:before{
+   content:'';
+   position:absolute;
+   top:-60%;
+   left:50%;
+   height:10px;
+   width:8px;
+   background:#ccc;
+   border-radius:50%;
+   box-shadow:
+   -5px 2px 0 10px #a60e10 /*1*/
+   ;
+   }
+   
+   /*Dropping ice cream part*/
+   #D, #D1, #D2, #D3, #D4{ 
+   content:'';
+   position:absolute;
+   top:320px;
+   left:200px;
+   height:40px;
+   z-index:10;
+   width:10px;
+   background:#dfd;
+   border-radius:0 0 10px 100px;
+   }
+   
+   #D{top:0px; left:165px; background:chocolate;}
+   
+   #D2{left:180px; height:80px; }
+   
+   #D3{top:300px; left:160px;
+   height:60px; background:pink;}
+   
+   #D4{top:320px; left:105px; background:#9accd5;}
+   
+   /*Chocolate chips*/
+   #CC{ 
+   position:absolute;
+   top:-30px;
+   left:20px;
+   height:10px;
+   width:10px;
+   background:brown;
+   border-radius:50%;
+   box-shadow:
+      -40px 20px brown /*1*/
+   , 50px 20px brown /*2*/
+   , 40px 50px brown /*3*/
+   ;
+   }
+   
+   
+      </style>
+  </head>
+  
+  <body>
+  <div id="Bowl">
+  <div id="D"></div>
+  </div>
+  <div id="BB"></div>
+  <div id="Holder"></div>
+  <div id="C"></div>
+  <div id="D1"></div>
+  <div id="D2"></div>
+  <div id="D3"></div>
+  <div id="D4"></div>
+  <div class="S">
+  <div id="CC"></div>
+  </div>  
+  </body>
