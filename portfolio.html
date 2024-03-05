@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style type="text/css">
+
+.DL{
+width:350px;
+background: #fff;
+margin:50px 20px;
+box-shadow: 2px 10px 14px #ccc;
+}
+
+/* list header */
+.LH {
+color:darkblue;
+font-size:17px;
+line-height: 1.25rem;
+font-weight:400;
+position: relative;
+align-items:center;
+text-align:center;  
+border:2px solid #7f9cce;
+}
+
+.LH:hover {
+font-weight:bold;
+}
+
+summary {
+padding:15px;
+display: flex;
+align-items:center;
+text-align:center;
+}
+
+details[open] + .LC{
+ padding: 1rem;
+ height:auto;
+ }
+ 
+ li{ list-style: none;}
+ 
+ ul li a {
+ width: auto;
+ height: 29px;
+ display: block;
+ padding:1px;
+ text-decoration:none;
+ text-align: center;
+ font-family: Georgia,'Times New Roman',serif;
+ color:#333;
+ background: repeating-linear-gradient(#fff,#4fe992d0 100px);
+ border-bottom:2px solid #eee;
+ }
+ 
+ a:hover {
+ font-weight: bold;
+ left:15px;
+ width:auto;
+ color:#333;
+ padding:2px;
+ position:relative;
+ background:;
+ border-radius:10px;
+ border:2px solid #ccc;
+ }
+ 
+/* list content*/
+.LC{
+color:#333;
+font-size:16px;
+padding: ;
+height:0 ;
+overflow: hidden;
+}
+
+progress {
+  width:250px;
+  height:20px;
+  background-color:light blue;
+  }
+  
+  /* coding experience */
+  .coding expirience{
+  padding:1px 10px;
+  height:auto;
+  width:270px;
+  position: relative;
+  color:#333;
+  }
+
+.profile{
+height:30px;
+width:30px;
+background-color:green;
+border-radius:50%;
+border:1px solid #ccc;
+}
+
+b{
+ text-align: center;
+ padding:18px 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="bg-gray-800 p-4">
+ <div class="profile"><b>SP</b></div>
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-xl font-bold">Safura Patel</a>
+        <div>
+            <a href="#about" class="text-white mr-4">About</a>
+            <a href="#portfolio" class="text-white mr-4">Portfolio</a>
+            <a href="#contact" class="text-white">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Homepage -->
+<section class="bg-gray-100 py-10">
+    <div class="container mx-auto text-center">
+        <h1 class="text-xl font-bold mb-4">Welcome to My Portfolio</h1>
+        <p class="text-lg text-gray-600">I'm passionate about creating awesome things.</p>
+        <a href="#portfolio" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-4 inline-block rounded">View Portfolio</a>
+    </div>
+</section>
+
+<!-- About Me -->
+<section id="portfolio" class=" px-2 bg-gray-200">
+
+<!--drop down list -->
+ <div class="DL">
+ <!-- list header -->
+ <details class="LH">
+ <summary> About Me</summary>
+ </details>
+ <!--list body -->
+ <div class="LC">
+ 
+ <p>I have a strong background in web development, with expertise in HTML, CSS, JavaScript, C#.net , python  and various web frameworks like tailwind CSS , bootStrap ect. I'm always eager to learn new technologies and expand my skill set. currently i am trying to learn react.js</p>
+ 
+
+ </div>
+ </div>
+</section>
+
+<section id="portfolio" class=" px-2 bg-gray-200">
+<!--drop down list -->
+ <div class="DL">
+ <!-- list header -->
+ <details class="LH">
+ <summary>👩‍💻 Skills 👩‍💻</summary>
+ </details>
+ 
+ <!--list body -->
+ <div class="LC">
+ 
+ <div class="coding expirience">
+ HTML5 (100%) &nbsp;<br>
+ <progress min="0" max="100" value="100"></progress>
+ <br><br><br>
+ 
+ CSS3 (95%) &nbsp; <br>
+ <progress min="0" max="100" value="95"></progress>
+ <br><br><br>
+ 
+ Java (70%) &nbsp; <br>
+ <progress min="0" max="100" value="70"></progress>
+ <br><br><br>
+ 
+ C#.net (95%) &nbsp; <br>
+ <progress min="0" max="100" value="95"></progress>
+ <br><br><br>
+ 
+ C++ (75%) &nbsp; <br>
+ <progress min="0" max="100" value="75"></progress>
+ <br><br><br>
+ 
+ C (80%) &nbsp; <br>
+ <progress min="0" max="100" value="80"></progress>
+ <br><br><br>
+ 
+ Python (70%) &nbsp; <br>
+ <progress min="0" max="100" value="70"></progress>
+ <br><br><br>
+ 
+ Javascript (65%) &nbsp; <br>
+ <progress min="0" max="100" value="65"></progress>
+ 
+ 
+ </div>
+ </div>
+</section>
+
+
+<!-- Portfolio -->
+<section id="about" class=" px-2 bg-gray-200">
+<!--drop down list -->
+ <div class="DL">
+ <!-- list header -->
+ <details class="LH">
+ <summary> 📂 Projects 📂 </summary>
+ </details>
+<!--list body -->
+ <div class="LC">
+ <ul>
+ 
+    <li> <a href="https://code.sololearn.com/WJeLJVVcs1Be/?ref=app"> 🎸 CSS GUITAR 🎸</a></li><br>
+    <li> <a href="https://code.sololearn.com/W5KNiYhheKtk/?ref=app"> 🦋 CSS BUTTERFLY 🦋</a></li><br>
+    <li> <a href="https://code.sololearn.com/WgE0oWKscra5/?ref=app"> ✨ CSS NIGHT SKY ✨</a></li><br>
+    <li> <a href="https://code.sololearn.com/WIAMcgywg4la/?ref=app"> 🏠 CSS HOUSE 🏠</a></li><br>
+    <li> <a href="https://code.sololearn.com/WAxv3ozsW55T/?ref=app"> 👰‍♀️ CSS GIRL 👰‍♀️</a></li><br>
+    <li> <a href="https://code.sololearn.com/WmlqsY3UQILs/?ref=app"> 📚🍫 chocolate book🍫📚</a></li><br>
+    <li> <a href="https://code.sololearn.com/W9fE6BZc9M4d/?ref=app"> 🍨 CSS ICE-CREAM 🍨</a></li><br>  
+    <li> <a href="https://code.sololearn.com/WeziSNk3R7EE/?ref=app"> ⚙️ CSS LOADER ⚙️</a></li><br>
+    <li> <a href="https://code.sololearn.com/WrrXBh7pRhSJ/?ref=app"> 📟 Calculator with history</a></li><br>
+    <li> <a href="https://code.sololearn.com/WnLw5jDy1T20/?ref=app"> Calendar📅 with time⏰</a></li><br>
+    <li> <a href="https://code.sololearn.com/WrwM0BhcKWr7/?ref=app"> 🗓️Full calendar🗓️</a></li><br>
+    <li> <a href="https://code.sololearn.com/Wn2miZf2Y2VX/?ref=app"> 🤔DID YOU KNOW🤔</a></li><br>
+    <li> <a href="https://code.sololearn.com/WpqBLY98hEgn/?ref=app"> 📟 Age Calculator 📟</a></li><br>
+    <li> <a href="https://code.sololearn.com/W4AkKGRjRfns/?ref=app"> True Words 💯</a></li><br>
+    <li> <a href="https://code.sololearn.com/W9W1ReImDe9S/?ref=app"> ⏱️Stop Watch⏱️</a></li><br>
+    <li> <a href="https://code.sololearn.com/WOSUpH0Jj4MR/?ref=app"> ⏰ Clock ⏰</a></li><br>
+    <li> <a href="https://code.sololearn.com/Wj9szcvAYwGM/?ref=app"> 📂 Code Store 📂</a></li><br>
+    <li> <a href="https://code.sololearn.com/cm78wQRwOvUL/?ref=app"> Calculator 📟</a></li><br>
+    <li> <a href="https://code.sololearn.com/W2qW8s2Em7z3/?ref=app"> 🐉Snake game🐉</a></li><br>
+    <li> <a href="https://code.sololearn.com/W8ghdAk46ut6/?ref=app"> 🧠Sweet memory workout🧠</a></li><br>
+    <li> <a href="https://code.sololearn.com/W8z983AKa2UL/?ref=app"> 🎴Profile Card🎴</a></li><br> 
+    <li> <a href="https://code.sololearn.com/W1H3MJY3IH5L/?ref=app"> ✏️CSS MAGIC PENCIL✏️</a></li><br> 
+    <li> <a href="https://github.com/SafuraPatel/Web-Projects-.git" alt="Erro"> Pharmacy Regulation App️</a></li><br> 
+    
+ </ul>
+ </div>
+ </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="p-0">
+    <!-- Your Contact content here -->
+    
+    <div class="flex text-xs space-x-2 items-center pl-2 pt-6 ">
+               <!-- whatsap  -->
+               
+               <img class="flex z-10 h-5 w-5" src="https://cdn.pixabay.com/photo/2021/05/22/11/38/whatsapp-6273368_1280.png ">
+               &nbsp;+919876543210 &nbsp;&nbsp;
+               
+               <!-- mail -->
+               <img class=" flex z-10 h-4 w-6" src="https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901_1280.png">
+               &nbsp;abc@gmail.com
+           </div>
+    
+    
+           <div class="flex text-xs space-x-2 items-center pl-2 pt-2">
+               <!-- telegram -->
+               <img class="flex z-10 h-5 w-5 " src="https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_1280.png ">
+               &nbsp;+919876543210 &nbsp;&nbsp;
+               <!-- instagram -->
+               <img class="flex z-10 h-6 w-6" src="https://cdn.pixabay.com/photo/2016/08/01/21/00/icon-1562136_1280.png">
+               &nbsp;Code_passioned
+           </div>
+       </div> <!-- sheet end -->
+       
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2024 Safura Patel . All rights reserved.</p>
+</footer>
+
+</body>
+</html>
